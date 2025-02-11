@@ -7,7 +7,3 @@ import (
 const (
 	ErrNilHTTPResponseWriter = erorr.Error("http400: nil http-response-writer")
 )
-
-const (
-	errNilHTTPResponseWriterHeader = erorr.Error("http400: nil http-response-writer header")
-)
