@@ -5,5 +5,5 @@ import (
 )
 
 func BadRequest(responseWriter http.ResponseWriter, request *http.Request) {
-	ServeString(responseWriter, DefaultStatusText)
+	Serve(responseWriter)
 }
