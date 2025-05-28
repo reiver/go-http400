@@ -2,6 +2,7 @@ package http400
 
 import (
 	"net/http"
+	"io"
 )
 
 func ServeString(responseWriter http.ResponseWriter, value string) error {
@@ -10,5 +11,10 @@ func ServeString(responseWriter http.ResponseWriter, value string) error {
 	}
 
 	responseWriter.WriteHeader(StatusCode)
+
+	if "" != value {
+		io.WriteString(responseWriter, value)
+	}
+
 	return nil
 }
